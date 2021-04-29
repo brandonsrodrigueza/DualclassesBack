@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const dbConnection = () => {
     
-    mongoose.connect('mongodb+srv://Dualclasses:1u6uto8e2021@cluster0.elhav.mongodb.net/DualclassesDB', {
+    mongoose.connect(process.env.DB_CNN, {
             useNewUrlParser: true, 
             useUnifiedTopology: true,
             useCreateIndex: true
